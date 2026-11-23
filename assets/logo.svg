@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="232" height="36" viewBox="0 0 232 36" role="img" aria-label="PlantDisease AI">
+  <path d="M5 31 C 4 15, 15 5, 33 4 C 33 21, 22 31, 5 31 Z" fill="#45bd72"/>
+  <path d="M7.5 28.5 C 13 21, 19 15, 27 9" stroke="#0b110e" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+  <text x="43" y="25" font-family="Manrope, 'DM Sans', 'Segoe UI', Arial, sans-serif" font-size="19" font-weight="800" fill="#ecf4ee">PlantDisease <tspan fill="#8ee3a1">AI</tspan></text>
+</svg>

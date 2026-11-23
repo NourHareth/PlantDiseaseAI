@@ -1,0 +1,623 @@
+{
+  "temperature": 0.9853,
+  "val_accuracy": 0.9552,
+  "ood": {
+    "synthetic": {
+      "msp": {
+        "auroc": 0.9391,
+        "fpr_at_95_tpr": 0.462
+      },
+      "energy": {
+        "auroc": 0.9822,
+        "fpr_at_95_tpr": 0.082
+      },
+      "mahalanobis": {
+        "auroc": 0.9847,
+        "fpr_at_95_tpr": 0.086
+      },
+      "mean_msp": 0.6639
+    },
+    "background_only": {
+      "msp": {
+        "auroc": 0.924,
+        "fpr_at_95_tpr": 0.5309
+      },
+      "energy": {
+        "auroc": 0.9873,
+        "fpr_at_95_tpr": 0.0619
+      },
+      "mahalanobis": {
+        "auroc": 0.9672,
+        "fpr_at_95_tpr": 0.2375
+      },
+      "mean_msp": 0.6892
+    }
+  },
+  "gradcam": {
+    "images": 300,
+    "layer": "block_13_expand_relu",
+    "attention_on_leaf": 0.7572,
+    "leaf_area_fraction": 0.5324,
+    "lift": 1.422
+  },
+  "speed": {
+    "latency_ms_median": 44.53,
+    "params": 2270794,
+    "model_mb": 9.68,
+    "latency_ms_p90": 52.12,
+    "latency_method": "interleaved benchmark, single image, Keras on CPU (scripts/benchmark_speed.py)"
+  },
+  "class_names": [
+    "Tomato___Bacterial_spot",
+    "Tomato___Early_blight",
+    "Tomato___Late_blight",
+    "Tomato___Leaf_Mold",
+    "Tomato___Septoria_leaf_spot",
+    "Tomato___Spider_mites Two-spotted_spider_mite",
+    "Tomato___Target_Spot",
+    "Tomato___Tomato_Yellow_Leaf_Curl_Virus",
+    "Tomato___Tomato_mosaic_virus",
+    "Tomato___healthy"
+  ],
+  "plantvillage_test": {
+    "accuracy": 0.9486,
+    "macro_f1": 0.9335,
+    "num_images": 2726,
+    "confusion_matrix": [
+      [
+        301,
+        1,
+        2,
+        1,
+        1,
+        1,
+        8,
+        4,
+        0,
+        0
+      ],
+      [
+        2,
+        123,
+        7,
+        3,
+        2,
+        2,
+        9,
+        0,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        269,
+        3,
+        3,
+        3,
+        4,
+        1,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        139,
+        0,
+        3,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        9,
+        1,
+        1,
+        6,
+        236,
+        1,
+        9,
+        0,
+        1,
+        2
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        0,
+        246,
+        2,
+        0,
+        0,
+        2
+      ],
+      [
+        0,
+        1,
+        0,
+        1,
+        1,
+        11,
+        190,
+        0,
+        1,
+        6
+      ],
+      [
+        2,
+        0,
+        0,
+        2,
+        0,
+        8,
+        0,
+        792,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        0,
+        4,
+        0,
+        0,
+        51,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        239
+      ]
+    ],
+    "accuracy_ci95": [
+      0.9402,
+      0.9567
+    ],
+    "ece": 0.0101,
+    "ece_calibrated": 0.0098,
+    "nll": 0.1508,
+    "nll_calibrated": 0.1512,
+    "mean_confidence": 0.9559,
+    "per_class_f1": {
+      "Tomato___Bacterial_spot": 0.9495,
+      "Tomato___Early_blight": 0.8849,
+      "Tomato___Late_blight": 0.9522,
+      "Tomato___Leaf_Mold": 0.9267,
+      "Tomato___Septoria_leaf_spot": 0.9273,
+      "Tomato___Spider_mites Two-spotted_spider_mite": 0.9283,
+      "Tomato___Target_Spot": 0.8756,
+      "Tomato___Tomato_Yellow_Leaf_Curl_Virus": 0.9894,
+      "Tomato___Tomato_mosaic_virus": 0.9273,
+      "Tomato___healthy": 0.9735
+    }
+  },
+  "plantdoc_all": {
+    "accuracy": 0.22,
+    "macro_f1": 0.1064,
+    "num_images": 741,
+    "confusion_matrix": [
+      [
+        0,
+        40,
+        56,
+        0,
+        11,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        40,
+        44,
+        0,
+        3,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        15,
+        94,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        17,
+        64,
+        6,
+        2,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        5,
+        67,
+        50,
+        3,
+        22,
+        0,
+        3,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        29,
+        38,
+        0,
+        5,
+        0,
+        1,
+        1,
+        0,
+        1
+      ],
+      [
+        0,
+        15,
+        32,
+        2,
+        2,
+        0,
+        1,
+        1,
+        0,
+        1
+      ],
+      [
+        0,
+        22,
+        25,
+        1,
+        13,
+        0,
+        0,
+        2,
+        0,
+        0
+      ]
+    ],
+    "accuracy_ci95": [
+      0.1916,
+      0.2497
+    ],
+    "ece": 0.5801,
+    "ece_calibrated": 0.583,
+    "nll": 6.0092,
+    "nll_calibrated": 6.0901,
+    "mean_confidence": 0.8001,
+    "per_class_f1": {
+      "Tomato___Bacterial_spot": 0.0,
+      "Tomato___Early_blight": 0.2402,
+      "Tomato___Late_blight": 0.365,
+      "Tomato___Leaf_Mold": 0.1165,
+      "Tomato___Septoria_leaf_spot": 0.2115,
+      "Tomato___Spider_mites Two-spotted_spider_mite": 0.0,
+      "Tomato___Target_Spot": 0.0,
+      "Tomato___Tomato_Yellow_Leaf_Curl_Virus": 0.0247,
+      "Tomato___Tomato_mosaic_virus": 0.0,
+      "Tomato___healthy": 0.0
+    }
+  },
+  "plantdoc_test": {
+    "accuracy": 0.2812,
+    "macro_f1": 0.1927,
+    "num_images": 64,
+    "confusion_matrix": [
+      [
+        0,
+        2,
+        5,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        4,
+        5,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        8,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        3,
+        2,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        3,
+        2,
+        0,
+        5,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        3,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        4,
+        3,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        4,
+        3,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ]
+    ],
+    "accuracy_ci95": [
+      0.1719,
+      0.3906
+    ],
+    "ece": 0.5239,
+    "ece_calibrated": 0.5266,
+    "nll": 6.7607,
+    "nll_calibrated": 6.8543,
+    "mean_confidence": 0.8052,
+    "per_class_f1": {
+      "Tomato___Bacterial_spot": 0.0,
+      "Tomato___Early_blight": 0.2424,
+      "Tomato___Late_blight": 0.4103,
+      "Tomato___Leaf_Mold": 0.2222,
+      "Tomato___Septoria_leaf_spot": 0.6667,
+      "Tomato___Spider_mites Two-spotted_spider_mite": 0.0,
+      "Tomato___Target_Spot": 0.0,
+      "Tomato___Tomato_Yellow_Leaf_Curl_Virus": 0.0,
+      "Tomato___Tomato_mosaic_virus": 0.0,
+      "Tomato___healthy": 0.0
+    }
+  },
+  "reliability": {
+    "raw": {
+      "confidence": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.3755,
+        0.4351,
+        0.5045,
+        0.5645,
+        0.6348,
+        0.6998,
+        0.7698,
+        0.838,
+        0.903,
+        0.9938
+      ],
+      "accuracy": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.4444,
+        0.4545,
+        0.4889,
+        0.6471,
+        0.5862,
+        0.8444,
+        0.7931,
+        0.8797,
+        0.9918
+      ],
+      "count": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        4,
+        9,
+        33,
+        45,
+        34,
+        58,
+        45,
+        58,
+        133,
+        2307
+      ]
+    },
+    "calibrated": {
+      "confidence": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.3774,
+        0.4337,
+        0.5036,
+        0.5636,
+        0.6333,
+        0.7017,
+        0.7683,
+        0.8381,
+        0.9042,
+        0.994
+      ],
+      "accuracy": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.375,
+        0.4375,
+        0.4773,
+        0.6571,
+        0.6207,
+        0.8049,
+        0.7937,
+        0.896,
+        0.9905
+      ],
+      "count": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        4,
+        8,
+        32,
+        44,
+        35,
+        58,
+        41,
+        63,
+        125,
+        2316
+      ]
+    }
+  },
+  "run": {
+    "name": "mnv2_finetune",
+    "group": "strategy",
+    "backbone": "mobilenetv2",
+    "strategy": "finetune",
+    "train_seconds": 542.7,
+    "epochs_run": 15,
+    "trainable_params": 1852426
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "_comment": "Experiment suite, listed in priority order. Every run uses the leakage-aware PlantVillage split; defaults come from plantdisease.training.TrainConfig. 'group' names the question a run answers.",
+  "runs": [
+    {"name": "mnv2_finetune",        "group": "strategy",      "backbone": "mobilenetv2", "strategy": "finetune"},
+    {"name": "mnv2_frozen",          "group": "strategy",      "backbone": "mobilenetv2", "strategy": "frozen", "epochs": 12},
+    {"name": "mnv2_finetune_bg",     "group": "field",         "backbone": "mobilenetv2", "strategy": "finetune", "augmentation": "strong", "background_prob": 0.6},
+    {"name": "mnv2_finetune_strong", "group": "augmentation",  "backbone": "mobilenetv2", "strategy": "finetune", "augmentation": "strong"},
+    {"name": "effb0_finetune",       "group": "backbone",      "backbone": "efficientnetb0", "strategy": "finetune"},
+    {"name": "mnv2_scratch",         "group": "strategy",      "backbone": "mobilenetv2", "strategy": "scratch", "epochs": 25, "patience": 5},
+    {"name": "mnv2_finetune_bg_mixed", "group": "field",       "backbone": "mobilenetv2", "strategy": "finetune", "augmentation": "strong", "background_prob": 0.6, "extra_train_sources": ["plantdoc"]},
+    {"name": "mnv2_finetune_noaug",  "group": "augmentation",  "backbone": "mobilenetv2", "strategy": "finetune", "augmentation": "none"},
+    {"name": "mnv2_finetune_s1",     "group": "seeds",         "backbone": "mobilenetv2", "strategy": "finetune", "seed": 1},
+    {"name": "mnv2_finetune_s2",     "group": "seeds",         "backbone": "mobilenetv2", "strategy": "finetune", "seed": 2},
+    {"name": "mnv2_finetune_bg_s1",  "group": "seeds",         "backbone": "mobilenetv2", "strategy": "finetune", "augmentation": "strong", "background_prob": 0.6, "seed": 1},
+    {"name": "mnv2_finetune_bg_s2",  "group": "seeds",         "backbone": "mobilenetv2", "strategy": "finetune", "augmentation": "strong", "background_prob": 0.6, "seed": 2},
+    {"name": "resnet50v2_finetune",  "group": "backbone",      "backbone": "resnet50v2", "strategy": "finetune"},
+    {"name": "mnv2_finetune_224",    "group": "resolution",    "backbone": "mobilenetv2", "strategy": "finetune", "image_size": 224}
+  ]
+}

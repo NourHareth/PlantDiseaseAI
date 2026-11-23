@@ -1,0 +1,23 @@
+[theme]
+base = "dark"
+primaryColor = "#45bd72"
+backgroundColor = "#0b110e"
+secondaryBackgroundColor = "#121b16"
+textColor = "#ecf4ee"
+borderColor = "#24322a"
+baseRadius = "12px"
+font = "DM Sans:https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap, sans-serif"
+headingFont = "Manrope:https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&display=swap, sans-serif"
+
+[theme.sidebar]
+backgroundColor = "#0e1712"
+
+[server]
+# Leaf photos rarely need more than this; keeps uploads and memory bounded.
+maxUploadSize = 15
+
+[browser]
+gatherUsageStats = false
+
+[client]
+toolbarMode = "minimal"

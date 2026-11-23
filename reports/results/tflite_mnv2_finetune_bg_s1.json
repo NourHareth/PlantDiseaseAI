@@ -1,0 +1,26 @@
+{
+  "model": "mnv2_finetune_bg_s1",
+  "eval_images": 500,
+  "keras": {
+    "accuracy": 0.846,
+    "model_mb": 9.69
+  },
+  "float32": {
+    "accuracy": 0.846,
+    "agreement_with_keras": 1.0,
+    "model_mb": 8.95,
+    "latency_ms_median": 0.62
+  },
+  "dynamic": {
+    "accuracy": 0.864,
+    "agreement_with_keras": 0.968,
+    "model_mb": 2.55,
+    "latency_ms_median": 3.19
+  },
+  "int8": {
+    "accuracy": 0.804,
+    "agreement_with_keras": 0.896,
+    "model_mb": 2.74,
+    "latency_ms_median": 0.32
+  }
+}

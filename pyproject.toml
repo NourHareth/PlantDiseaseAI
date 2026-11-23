@@ -1,0 +1,16 @@
+[project]
+name = "plantdisease-ai"
+version = "2.0.0"
+description = "Tomato leaf disease classification with MobileNetV2 transfer learning, Grad-CAM and a Streamlit app."
+readme = "README.md"
+requires-python = ">=3.10"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = [".", "tests"]
+addopts = "-ra"
+markers = ["slow: trains a tiny model end to end (about a minute on CPU)"]
+filterwarnings = [
+    "ignore::DeprecationWarning",
+    "ignore::FutureWarning",
+]

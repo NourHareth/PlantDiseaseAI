@@ -1,0 +1,20 @@
+{
+  "model_dir": "C:\\Users\\hrthn\\OneDrive\\Desktop\\PlantDiseaseAI\\models",
+  "threshold": -5820.437325453478,
+  "plantvillage_test": {
+    "images": 2726,
+    "flagged_share": 0.0532,
+    "accuracy_all": 0.8962,
+    "accuracy_accepted": 0.8966,
+    "accuracy_flagged": 0.8897,
+    "accepted": 2581
+  },
+  "plantdoc_all": {
+    "images": 741,
+    "flagged_share": 0.9474,
+    "accuracy_all": 0.2281,
+    "accuracy_accepted": 0.3333,
+    "accuracy_flagged": 0.2222,
+    "accepted": 39
+  }
+}

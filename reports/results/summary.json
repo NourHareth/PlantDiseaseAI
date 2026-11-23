@@ -1,0 +1,940 @@
+{
+  "runs": [
+    {
+      "name": "baseline_v1_deployed",
+      "group": "baseline",
+      "backbone": "mobilenetv2",
+      "strategy": "frozen",
+      "image_size": 128,
+      "augmentation": "standard",
+      "background_prob": 0.0,
+      "extra_train": "",
+      "seed": 42,
+      "pv_accuracy": 0.8962,
+      "pv_ci95": [
+        0.8848,
+        0.9076
+      ],
+      "pv_macro_f1": 0.8661,
+      "pv_ece": 0.0275,
+      "pv_ece_calibrated": 0.018,
+      "temperature": 0.8178,
+      "params": 2270794,
+      "latency_ms": 46.45,
+      "model_mb": 9.78,
+      "train_minutes": null,
+      "gradcam_lift": 1.164,
+      "gradcam_on_leaf": 0.6196,
+      "note": "Original deployed model; its training split is unknown, so PlantVillage test images may have been seen in training (PlantDoc numbers are unaffected).",
+      "pd_accuracy": 0.2281,
+      "pd_ci95": [
+        0.1984,
+        0.2578
+      ],
+      "pd_macro_f1": 0.11,
+      "pd_ece": 0.5668,
+      "pd_ece_calibrated": 0.6027,
+      "domain_gap": 0.6681,
+      "pd_test_accuracy": 0.2188,
+      "pd_test_ci95": [
+        0.125,
+        0.3281
+      ],
+      "ood_synthetic_msp": 0.798,
+      "ood_synthetic_energy": 0.931,
+      "ood_synthetic_mahalanobis": 0.9999,
+      "ood_background_only_msp": 0.5881,
+      "ood_background_only_energy": 0.8727,
+      "ood_background_only_mahalanobis": 0.9995
+    },
+    {
+      "name": "effb0_finetune",
+      "group": "backbone",
+      "backbone": "efficientnetb0",
+      "strategy": "finetune",
+      "image_size": 128,
+      "augmentation": "standard",
+      "background_prob": 0.0,
+      "extra_train": "",
+      "seed": 42,
+      "pv_accuracy": 0.9596,
+      "pv_ci95": [
+        0.9523,
+        0.9663
+      ],
+      "pv_macro_f1": 0.9495,
+      "pv_ece": 0.0096,
+      "pv_ece_calibrated": 0.0073,
+      "temperature": 1.1378,
+      "params": 4062381,
+      "latency_ms": 86.58,
+      "model_mb": 17.1,
+      "train_minutes": 24.5,
+      "gradcam_lift": 1.309,
+      "gradcam_on_leaf": 0.6967,
+      "note": "",
+      "pd_accuracy": 0.2119,
+      "pd_ci95": [
+        0.1835,
+        0.2402
+      ],
+      "pd_macro_f1": 0.1176,
+      "pd_ece": 0.6147,
+      "pd_ece_calibrated": 0.5929,
+      "domain_gap": 0.7477,
+      "pd_test_accuracy": 0.2344,
+      "pd_test_ci95": [
+        0.1406,
+        0.3438
+      ],
+      "ood_synthetic_msp": 0.9147,
+      "ood_synthetic_energy": 0.8923,
+      "ood_synthetic_mahalanobis": 0.9997,
+      "ood_background_only_msp": 0.9162,
+      "ood_background_only_energy": 0.9304,
+      "ood_background_only_mahalanobis": 0.9994
+    },
+    {
+      "name": "mnv2_finetune",
+      "group": "strategy",
+      "backbone": "mobilenetv2",
+      "strategy": "finetune",
+      "image_size": 128,
+      "augmentation": "standard",
+      "background_prob": 0.0,
+      "extra_train": "",
+      "seed": 42,
+      "pv_accuracy": 0.9486,
+      "pv_ci95": [
+        0.9402,
+        0.9567
+      ],
+      "pv_macro_f1": 0.9335,
+      "pv_ece": 0.0101,
+      "pv_ece_calibrated": 0.0098,
+      "temperature": 0.9853,
+      "params": 2270794,
+      "latency_ms": 44.53,
+      "model_mb": 9.68,
+      "train_minutes": 9.0,
+      "gradcam_lift": 1.422,
+      "gradcam_on_leaf": 0.7572,
+      "note": "",
+      "pd_accuracy": 0.22,
+      "pd_ci95": [
+        0.1916,
+        0.2497
+      ],
+      "pd_macro_f1": 0.1064,
+      "pd_ece": 0.5801,
+      "pd_ece_calibrated": 0.583,
+      "domain_gap": 0.7286,
+      "pd_test_accuracy": 0.2812,
+      "pd_test_ci95": [
+        0.1719,
+        0.3906
+      ],
+      "ood_synthetic_msp": 0.9391,
+      "ood_synthetic_energy": 0.9822,
+      "ood_synthetic_mahalanobis": 0.9847,
+      "ood_background_only_msp": 0.924,
+      "ood_background_only_energy": 0.9873,
+      "ood_background_only_mahalanobis": 0.9672
+    },
+    {
+      "name": "mnv2_finetune_224",
+      "group": "resolution",
+      "backbone": "mobilenetv2",
+      "strategy": "finetune",
+      "image_size": 224,
+      "augmentation": "standard",
+      "background_prob": 0.0,
+      "extra_train": "",
+      "seed": 42,
+      "pv_accuracy": 0.9494,
+      "pv_ci95": [
+        0.9409,
+        0.9574
+      ],
+      "pv_macro_f1": 0.9352,
+      "pv_ece": 0.0181,
+      "pv_ece_calibrated": 0.0157,
+      "temperature": 1.1487,
+      "params": 2270794,
+      "latency_ms": 50.25,
+      "model_mb": 9.68,
+      "train_minutes": 31.3,
+      "gradcam_lift": 1.374,
+      "gradcam_on_leaf": 0.6475,
+      "note": "",
+      "pd_accuracy": 0.2348,
+      "pd_ci95": [
+        0.2038,
+        0.2659
+      ],
+      "pd_macro_f1": 0.1101,
+      "pd_ece": 0.66,
+      "pd_ece_calibrated": 0.6451,
+      "domain_gap": 0.7146,
+      "pd_test_accuracy": 0.25,
+      "pd_test_ci95": [
+        0.1562,
+        0.3594
+      ],
+      "ood_synthetic_msp": 0.8776,
+      "ood_synthetic_energy": 0.9552,
+      "ood_synthetic_mahalanobis": 0.9998,
+      "ood_background_only_msp": 0.8901,
+      "ood_background_only_energy": 0.9606,
+      "ood_background_only_mahalanobis": 0.9989
+    },
+    {
+      "name": "mnv2_finetune_bg",
+      "group": "field",
+      "backbone": "mobilenetv2",
+      "strategy": "finetune",
+      "image_size": 128,
+      "augmentation": "strong",
+      "background_prob": 0.6,
+      "extra_train": "",
+      "seed": 42,
+      "pv_accuracy": 0.9112,
+      "pv_ci95": [
+        0.9002,
+        0.9222
+      ],
+      "pv_macro_f1": 0.8807,
+      "pv_ece": 0.0101,
+      "pv_ece_calibrated": 0.0111,
+      "temperature": 0.9218,
+      "params": 2270794,
+      "latency_ms": 44.36,
+      "model_mb": 9.69,
+      "train_minutes": 12.3,
+      "gradcam_lift": 1.408,
+      "gradcam_on_leaf": 0.7495,
+      "note": "",
+      "pd_accuracy": 0.2524,
+      "pd_ci95": [
+        0.22,
+        0.2834
+      ],
+      "pd_macro_f1": 0.1677,
+      "pd_ece": 0.4448,
+      "pd_ece_calibrated": 0.4656,
+      "domain_gap": 0.6588,
+      "pd_test_accuracy": 0.2969,
+      "pd_test_ci95": [
+        0.1875,
+        0.4062
+      ],
+      "ood_synthetic_msp": 0.9031,
+      "ood_synthetic_energy": 0.977,
+      "ood_synthetic_mahalanobis": 0.7536,
+      "ood_background_only_msp": 0.8845,
+      "ood_background_only_energy": 0.9658,
+      "ood_background_only_mahalanobis": 0.9775
+    },
+    {
+      "name": "mnv2_finetune_bg_mixed",
+      "group": "field",
+      "backbone": "mobilenetv2",
+      "strategy": "finetune",
+      "image_size": 128,
+      "augmentation": "strong",
+      "background_prob": 0.6,
+      "extra_train": "plantdoc",
+      "seed": 42,
+      "pv_accuracy": 0.8896,
+      "pv_ci95": [
+        0.8778,
+        0.901
+      ],
+      "pv_macro_f1": 0.8566,
+      "pv_ece": 0.0169,
+      "pv_ece_calibrated": 0.0178,
+      "temperature": 1.0134,
+      "params": 2270794,
+      "latency_ms": 44.68,
+      "model_mb": 9.69,
+      "train_minutes": 21.7,
+      "gradcam_lift": 1.415,
+      "gradcam_on_leaf": 0.7532,
+      "note": "",
+      "pd_test_accuracy": 0.4062,
+      "pd_test_ci95": [
+        0.2812,
+        0.5312
+      ],
+      "ood_synthetic_msp": 0.9443,
+      "ood_synthetic_energy": 0.9866,
+      "ood_synthetic_mahalanobis": 0.9847,
+      "ood_background_only_msp": 0.8343,
+      "ood_background_only_energy": 0.9417,
+      "ood_background_only_mahalanobis": 0.9872
+    },
+    {
+      "name": "mnv2_finetune_bg_s1",
+      "group": "seeds",
+      "backbone": "mobilenetv2",
+      "strategy": "finetune",
+      "image_size": 128,
+      "augmentation": "strong",
+      "background_prob": 0.6,
+      "extra_train": "",
+      "seed": 1,
+      "pv_accuracy": 0.8511,
+      "pv_ci95": [
+        0.8375,
+        0.8643
+      ],
+      "pv_macro_f1": 0.8002,
+      "pv_ece": 0.0277,
+      "pv_ece_calibrated": 0.0164,
+      "temperature": 1.1545,
+      "params": 2270794,
+      "latency_ms": 44.54,
+      "model_mb": 9.69,
+      "train_minutes": 13.3,
+      "gradcam_lift": 1.433,
+      "gradcam_on_leaf": 0.763,
+      "note": "",
+      "pd_accuracy": 0.2915,
+      "pd_ci95": [
+        0.2591,
+        0.3225
+      ],
+      "pd_macro_f1": 0.1642,
+      "pd_ece": 0.414,
+      "pd_ece_calibrated": 0.3782,
+      "domain_gap": 0.5596,
+      "pd_test_accuracy": 0.375,
+      "pd_test_ci95": [
+        0.2656,
+        0.4844
+      ],
+      "ood_synthetic_msp": 0.7756,
+      "ood_synthetic_energy": 0.946,
+      "ood_synthetic_mahalanobis": 0.9966,
+      "ood_background_only_msp": 0.8132,
+      "ood_background_only_energy": 0.9271,
+      "ood_background_only_mahalanobis": 0.9928
+    },
+    {
+      "name": "mnv2_finetune_bg_s2",
+      "group": "seeds",
+      "backbone": "mobilenetv2",
+      "strategy": "finetune",
+      "image_size": 128,
+      "augmentation": "strong",
+      "background_prob": 0.6,
+      "extra_train": "",
+      "seed": 2,
+      "pv_accuracy": 0.8525,
+      "pv_ci95": [
+        0.8397,
+        0.8661
+      ],
+      "pv_macro_f1": 0.7941,
+      "pv_ece": 0.0322,
+      "pv_ece_calibrated": 0.0124,
+      "temperature": 0.817,
+      "params": 2270794,
+      "latency_ms": 44.71,
+      "model_mb": 9.69,
+      "train_minutes": 9.9,
+      "gradcam_lift": 1.371,
+      "gradcam_on_leaf": 0.7298,
+      "note": "",
+      "pd_accuracy": 0.2699,
+      "pd_ci95": [
+        0.2389,
+        0.3023
+      ],
+      "pd_macro_f1": 0.1473,
+      "pd_ece": 0.3419,
+      "pd_ece_calibrated": 0.3986,
+      "domain_gap": 0.5826,
+      "pd_test_accuracy": 0.2344,
+      "pd_test_ci95": [
+        0.1406,
+        0.3438
+      ],
+      "ood_synthetic_msp": 0.7655,
+      "ood_synthetic_energy": 0.862,
+      "ood_synthetic_mahalanobis": 0.9973,
+      "ood_background_only_msp": 0.8648,
+      "ood_background_only_energy": 0.9706,
+      "ood_background_only_mahalanobis": 0.9912
+    },
+    {
+      "name": "mnv2_finetune_noaug",
+      "group": "augmentation",
+      "backbone": "mobilenetv2",
+      "strategy": "finetune",
+      "image_size": 128,
+      "augmentation": "none",
+      "background_prob": 0.0,
+      "extra_train": "",
+      "seed": 42,
+      "pv_accuracy": 0.9721,
+      "pv_ci95": [
+        0.9655,
+        0.978
+      ],
+      "pv_macro_f1": 0.9611,
+      "pv_ece": 0.01,
+      "pv_ece_calibrated": 0.0082,
+      "temperature": 1.3025,
+      "params": 2270794,
+      "latency_ms": 43.94,
+      "model_mb": 9.67,
+      "train_minutes": 15.8,
+      "gradcam_lift": 1.239,
+      "gradcam_on_leaf": 0.6596,
+      "note": "",
+      "pd_accuracy": 0.2321,
+      "pd_ci95": [
+        0.2038,
+        0.2632
+      ],
+      "pd_macro_f1": 0.1304,
+      "pd_ece": 0.6259,
+      "pd_ece_calibrated": 0.5838,
+      "domain_gap": 0.74,
+      "pd_test_accuracy": 0.25,
+      "pd_test_ci95": [
+        0.1562,
+        0.3594
+      ],
+      "ood_synthetic_msp": 0.9744,
+      "ood_synthetic_energy": 0.9938,
+      "ood_synthetic_mahalanobis": 0.8412,
+      "ood_background_only_msp": 0.8859,
+      "ood_background_only_energy": 0.9714,
+      "ood_background_only_mahalanobis": 0.9756
+    },
+    {
+      "name": "mnv2_finetune_s1",
+      "group": "seeds",
+      "backbone": "mobilenetv2",
+      "strategy": "finetune",
+      "image_size": 128,
+      "augmentation": "standard",
+      "background_prob": 0.0,
+      "extra_train": "",
+      "seed": 1,
+      "pv_accuracy": 0.9626,
+      "pv_ci95": [
+        0.9552,
+        0.9696
+      ],
+      "pv_macro_f1": 0.9467,
+      "pv_ece": 0.0095,
+      "pv_ece_calibrated": 0.0069,
+      "temperature": 1.0976,
+      "params": 2270794,
+      "latency_ms": 44.36,
+      "model_mb": 9.68,
+      "train_minutes": 17.6,
+      "gradcam_lift": 1.387,
+      "gradcam_on_leaf": 0.7385,
+      "note": "",
+      "pd_accuracy": 0.2294,
+      "pd_ci95": [
+        0.1984,
+        0.2605
+      ],
+      "pd_macro_f1": 0.1148,
+      "pd_ece": 0.62,
+      "pd_ece_calibrated": 0.6059,
+      "domain_gap": 0.7332,
+      "pd_test_accuracy": 0.2344,
+      "pd_test_ci95": [
+        0.1406,
+        0.3438
+      ],
+      "ood_synthetic_msp": 0.9168,
+      "ood_synthetic_energy": 0.9638,
+      "ood_synthetic_mahalanobis": 0.9202,
+      "ood_background_only_msp": 0.9108,
+      "ood_background_only_energy": 0.9718,
+      "ood_background_only_mahalanobis": 0.9557
+    },
+    {
+      "name": "mnv2_finetune_s2",
+      "group": "seeds",
+      "backbone": "mobilenetv2",
+      "strategy": "finetune",
+      "image_size": 128,
+      "augmentation": "standard",
+      "background_prob": 0.0,
+      "extra_train": "",
+      "seed": 2,
+      "pv_accuracy": 0.9472,
+      "pv_ci95": [
+        0.9387,
+        0.9552
+      ],
+      "pv_macro_f1": 0.93,
+      "pv_ece": 0.0136,
+      "pv_ece_calibrated": 0.0079,
+      "temperature": 1.1531,
+      "params": 2270794,
+      "latency_ms": 45.06,
+      "model_mb": 9.68,
+      "train_minutes": 16.1,
+      "gradcam_lift": 1.396,
+      "gradcam_on_leaf": 0.7431,
+      "note": "",
+      "pd_accuracy": 0.2227,
+      "pd_ci95": [
+        0.1943,
+        0.2524
+      ],
+      "pd_macro_f1": 0.1236,
+      "pd_ece": 0.6018,
+      "pd_ece_calibrated": 0.5756,
+      "domain_gap": 0.7245,
+      "pd_test_accuracy": 0.25,
+      "pd_test_ci95": [
+        0.1559,
+        0.3594
+      ],
+      "ood_synthetic_msp": 0.94,
+      "ood_synthetic_energy": 0.9657,
+      "ood_synthetic_mahalanobis": 0.9936,
+      "ood_background_only_msp": 0.8689,
+      "ood_background_only_energy": 0.9726,
+      "ood_background_only_mahalanobis": 0.9699
+    },
+    {
+      "name": "mnv2_finetune_strong",
+      "group": "augmentation",
+      "backbone": "mobilenetv2",
+      "strategy": "finetune",
+      "image_size": 128,
+      "augmentation": "strong",
+      "background_prob": 0.0,
+      "extra_train": "",
+      "seed": 42,
+      "pv_accuracy": 0.9365,
+      "pv_ci95": [
+        0.927,
+        0.9457
+      ],
+      "pv_macro_f1": 0.9153,
+      "pv_ece": 0.0135,
+      "pv_ece_calibrated": 0.0137,
+      "temperature": 0.977,
+      "params": 2270794,
+      "latency_ms": 44.0,
+      "model_mb": 9.69,
+      "train_minutes": 21.0,
+      "gradcam_lift": 1.242,
+      "gradcam_on_leaf": 0.6613,
+      "note": "",
+      "pd_accuracy": 0.2699,
+      "pd_ci95": [
+        0.2389,
+        0.3023
+      ],
+      "pd_macro_f1": 0.1522,
+      "pd_ece": 0.473,
+      "pd_ece_calibrated": 0.4783,
+      "domain_gap": 0.6666,
+      "pd_test_accuracy": 0.3125,
+      "pd_test_ci95": [
+        0.2031,
+        0.4219
+      ],
+      "ood_synthetic_msp": 0.9104,
+      "ood_synthetic_energy": 0.9704,
+      "ood_synthetic_mahalanobis": 0.9889,
+      "ood_background_only_msp": 0.8658,
+      "ood_background_only_energy": 0.9514,
+      "ood_background_only_mahalanobis": 0.9735
+    },
+    {
+      "name": "mnv2_frozen",
+      "group": "strategy",
+      "backbone": "mobilenetv2",
+      "strategy": "frozen",
+      "image_size": 128,
+      "augmentation": "standard",
+      "background_prob": 0.0,
+      "extra_train": "",
+      "seed": 42,
+      "pv_accuracy": 0.8481,
+      "pv_ci95": [
+        0.8345,
+        0.8617
+      ],
+      "pv_macro_f1": 0.8051,
+      "pv_ece": 0.0234,
+      "pv_ece_calibrated": 0.0191,
+      "temperature": 1.0161,
+      "params": 2270794,
+      "latency_ms": 44.11,
+      "model_mb": 9.68,
+      "train_minutes": 5.9,
+      "gradcam_lift": 1.147,
+      "gradcam_on_leaf": 0.6105,
+      "note": "",
+      "pd_accuracy": 0.2132,
+      "pd_ci95": [
+        0.1849,
+        0.2429
+      ],
+      "pd_macro_f1": 0.1101,
+      "pd_ece": 0.5658,
+      "pd_ece_calibrated": 0.5625,
+      "domain_gap": 0.6349,
+      "pd_test_accuracy": 0.25,
+      "pd_test_ci95": [
+        0.1562,
+        0.3594
+      ],
+      "ood_synthetic_msp": 0.5217,
+      "ood_synthetic_energy": 0.8222,
+      "ood_synthetic_mahalanobis": 0.9999,
+      "ood_background_only_msp": 0.5316,
+      "ood_background_only_energy": 0.7743,
+      "ood_background_only_mahalanobis": 0.9995
+    },
+    {
+      "name": "mnv2_scratch",
+      "group": "strategy",
+      "backbone": "mobilenetv2",
+      "strategy": "scratch",
+      "image_size": 128,
+      "augmentation": "standard",
+      "background_prob": 0.0,
+      "extra_train": "",
+      "seed": 42,
+      "pv_accuracy": 0.9321,
+      "pv_ci95": [
+        0.9226,
+        0.9413
+      ],
+      "pv_macro_f1": 0.9119,
+      "pv_ece": 0.0187,
+      "pv_ece_calibrated": 0.0087,
+      "temperature": 1.1515,
+      "params": 2270794,
+      "latency_ms": 44.05,
+      "model_mb": 9.68,
+      "train_minutes": 40.0,
+      "gradcam_lift": 1.285,
+      "gradcam_on_leaf": 0.6841,
+      "note": "",
+      "pd_accuracy": 0.2119,
+      "pd_ci95": [
+        0.1835,
+        0.2429
+      ],
+      "pd_macro_f1": 0.1246,
+      "pd_ece": 0.6556,
+      "pd_ece_calibrated": 0.6348,
+      "domain_gap": 0.7202,
+      "pd_test_accuracy": 0.2031,
+      "pd_test_ci95": [
+        0.1094,
+        0.3125
+      ],
+      "ood_synthetic_msp": 0.7946,
+      "ood_synthetic_energy": 0.6605,
+      "ood_synthetic_mahalanobis": 0.9925,
+      "ood_background_only_msp": 0.8495,
+      "ood_background_only_energy": 0.8423,
+      "ood_background_only_mahalanobis": 0.8696
+    },
+    {
+      "name": "resnet50v2_finetune",
+      "group": "backbone",
+      "backbone": "resnet50v2",
+      "strategy": "finetune",
+      "image_size": 128,
+      "augmentation": "standard",
+      "background_prob": 0.0,
+      "extra_train": "",
+      "seed": 42,
+      "pv_accuracy": 0.9508,
+      "pv_ci95": [
+        0.9424,
+        0.9593
+      ],
+      "pv_macro_f1": 0.9344,
+      "pv_ece": 0.016,
+      "pv_ece_calibrated": 0.0085,
+      "temperature": 1.1624,
+      "params": 23585290,
+      "latency_ms": 69.49,
+      "model_mb": 95.03,
+      "train_minutes": 32.8,
+      "gradcam_lift": 1.113,
+      "gradcam_on_leaf": 0.5925,
+      "note": "",
+      "pd_accuracy": 0.2335,
+      "pd_ci95": [
+        0.2037,
+        0.2659
+      ],
+      "pd_macro_f1": 0.1321,
+      "pd_ece": 0.6369,
+      "pd_ece_calibrated": 0.6166,
+      "domain_gap": 0.7173,
+      "pd_test_accuracy": 0.2656,
+      "pd_test_ci95": [
+        0.1562,
+        0.375
+      ],
+      "ood_synthetic_msp": 0.794,
+      "ood_synthetic_energy": 0.3674,
+      "ood_synthetic_mahalanobis": 0.9992,
+      "ood_background_only_msp": 0.8209,
+      "ood_background_only_energy": 0.8056,
+      "ood_background_only_mahalanobis": 0.9793
+    }
+  ],
+  "seed_stats": [
+    {
+      "family": "MobileNetV2 fine-tuned",
+      "runs": 3,
+      "pv_accuracy": {
+        "mean": 0.9528,
+        "std": 0.0085
+      },
+      "pd_accuracy": {
+        "mean": 0.224,
+        "std": 0.0048
+      },
+      "pv_ece": {
+        "mean": 0.0111,
+        "std": 0.0022
+      },
+      "gradcam_lift": {
+        "mean": 1.4017,
+        "std": 0.0182
+      }
+    },
+    {
+      "family": "MobileNetV2 fine-tuned + background replacement",
+      "runs": 3,
+      "pv_accuracy": {
+        "mean": 0.8716,
+        "std": 0.0343
+      },
+      "pd_accuracy": {
+        "mean": 0.2713,
+        "std": 0.0196
+      },
+      "pv_ece": {
+        "mean": 0.0233,
+        "std": 0.0117
+      },
+      "gradcam_lift": {
+        "mean": 1.404,
+        "std": 0.0312
+      }
+    }
+  ],
+  "best_run": "mnv2_finetune_bg_s1",
+  "best_rule": "highest PlantDoc (field-photo) accuracy among the experiment runs. This is chosen on test data, so it is a description, not a model selection, and margins of a few points are within noise.",
+  "comparisons": [
+    {
+      "question": "Fine-tuning vs. a frozen backbone",
+      "a": "mnv2_frozen",
+      "b": "mnv2_finetune",
+      "split": "plantvillage_test",
+      "images": 2726,
+      "accuracy_a": 0.8481,
+      "accuracy_b": 0.9486,
+      "difference": 0.1005,
+      "only_a": 43,
+      "only_b": 317,
+      "p_value": 9.953188701530246e-53,
+      "p_holm": 9.953188701530246e-52
+    },
+    {
+      "question": "ImageNet pre-training vs. random initialisation",
+      "a": "mnv2_scratch",
+      "b": "mnv2_finetune",
+      "split": "plantvillage_test",
+      "images": 2726,
+      "accuracy_a": 0.9321,
+      "accuracy_b": 0.9486,
+      "difference": 0.0165,
+      "only_a": 102,
+      "only_b": 147,
+      "p_value": 0.005193515987957731,
+      "p_holm": 0.031161095927746386
+    },
+    {
+      "question": "EfficientNetB0 vs. MobileNetV2 (lab)",
+      "a": "mnv2_finetune",
+      "b": "effb0_finetune",
+      "split": "plantvillage_test",
+      "images": 2726,
+      "accuracy_a": 0.9486,
+      "accuracy_b": 0.9596,
+      "difference": 0.011,
+      "only_a": 73,
+      "only_b": 103,
+      "p_value": 0.02853138074781567,
+      "p_holm": 0.11412552299126268
+    },
+    {
+      "question": "No augmentation vs. standard (lab)",
+      "a": "mnv2_finetune",
+      "b": "mnv2_finetune_noaug",
+      "split": "plantvillage_test",
+      "images": 2726,
+      "accuracy_a": 0.9486,
+      "accuracy_b": 0.9721,
+      "difference": 0.0235,
+      "only_a": 42,
+      "only_b": 106,
+      "p_value": 1.4461330447994005e-07,
+      "p_holm": 1.3015197403194606e-06
+    },
+    {
+      "question": "Strong vs. standard augmentation (field)",
+      "a": "mnv2_finetune",
+      "b": "mnv2_finetune_strong",
+      "split": "plantdoc_all",
+      "images": 741,
+      "accuracy_a": 0.22,
+      "accuracy_b": 0.2699,
+      "difference": 0.0499,
+      "only_a": 49,
+      "only_b": 86,
+      "p_value": 0.0018377911087715628,
+      "p_holm": 0.01286453776140094
+    },
+    {
+      "question": "Adding background replacement (field)",
+      "a": "mnv2_finetune_strong",
+      "b": "mnv2_finetune_bg",
+      "split": "plantdoc_all",
+      "images": 741,
+      "accuracy_a": 0.2699,
+      "accuracy_b": 0.2524,
+      "difference": -0.0175,
+      "only_a": 59,
+      "only_b": 46,
+      "p_value": 0.24143171756517745,
+      "p_holm": 0.5677413940429688
+    },
+    {
+      "question": "Adding background replacement (lab)",
+      "a": "mnv2_finetune_strong",
+      "b": "mnv2_finetune_bg",
+      "split": "plantvillage_test",
+      "images": 2726,
+      "accuracy_a": 0.9365,
+      "accuracy_b": 0.9112,
+      "difference": -0.0253,
+      "only_a": 121,
+      "only_b": 52,
+      "p_value": 1.624105471980768e-07,
+      "p_holm": 1.3015197403194606e-06
+    },
+    {
+      "question": "224 px vs. 128 px input (field)",
+      "a": "mnv2_finetune",
+      "b": "mnv2_finetune_224",
+      "split": "plantdoc_all",
+      "images": 741,
+      "accuracy_a": 0.22,
+      "accuracy_b": 0.2348,
+      "difference": 0.0148,
+      "only_a": 32,
+      "only_b": 43,
+      "p_value": 0.24804574189252795,
+      "p_holm": 0.5677413940429688
+    },
+    {
+      "question": "Adding 677 field photos to training (field)",
+      "a": "mnv2_finetune_bg",
+      "b": "mnv2_finetune_bg_mixed",
+      "split": "plantdoc_test",
+      "images": 64,
+      "accuracy_a": 0.2969,
+      "accuracy_b": 0.4062,
+      "difference": 0.1094,
+      "only_a": 7,
+      "only_b": 14,
+      "p_value": 0.18924713134765625,
+      "p_holm": 0.5677413940429688
+    },
+    {
+      "question": "Strong-augmentation model vs. deployed model (field)",
+      "a": "baseline_v1_deployed",
+      "b": "mnv2_finetune_strong",
+      "split": "plantdoc_all",
+      "images": 741,
+      "accuracy_a": 0.2281,
+      "accuracy_b": 0.2699,
+      "difference": 0.0418,
+      "only_a": 49,
+      "only_b": 80,
+      "p_value": 0.008007673208090862,
+      "p_holm": 0.04003836604045431
+    }
+  ],
+  "tflite": [
+    {
+      "model": "baseline_v1_deployed",
+      "eval_images": 500,
+      "keras": {
+        "accuracy": 0.87,
+        "model_mb": 9.78
+      },
+      "float32": {
+        "accuracy": 0.87,
+        "agreement_with_keras": 1.0,
+        "model_mb": 8.95,
+        "latency_ms_median": 0.6
+      },
+      "dynamic": {
+        "accuracy": 0.874,
+        "agreement_with_keras": 0.956,
+        "model_mb": 2.55,
+        "latency_ms_median": 3.2
+      },
+      "int8": {
+        "accuracy": 0.802,
+        "agreement_with_keras": 0.828,
+        "model_mb": 2.74,
+        "latency_ms_median": 0.32
+      }
+    },
+    {
+      "model": "mnv2_finetune_bg_s1",
+      "eval_images": 500,
+      "keras": {
+        "accuracy": 0.846,
+        "model_mb": 9.69
+      },
+      "float32": {
+        "accuracy": 0.846,
+        "agreement_with_keras": 1.0,
+        "model_mb": 8.95,
+        "latency_ms_median": 0.62
+      },
+      "dynamic": {
+        "accuracy": 0.864,
+        "agreement_with_keras": 0.968,
+        "model_mb": 2.55,
+        "latency_ms_median": 3.19
+      },
+      "int8": {
+        "accuracy": 0.804,
+        "agreement_with_keras": 0.896,
+        "model_mb": 2.74,
+        "latency_ms_median": 0.32
+      }
+    }
+  ]
+}

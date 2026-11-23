@@ -1,0 +1,17 @@
+{
+  "name": "PlantDisease AI tomato leaf classifier",
+  "backbone": "MobileNetV2",
+  "architecture": "MobileNetV2 backbone + global average pooling + dropout (0.3) + dense softmax",
+  "pretrained_weights": "ImageNet",
+  "training": "Transfer learning with a frozen backbone (feature extraction only)",
+  "dataset": "PlantVillage tomato classes (10 categories, lab photos of single leaves)",
+  "evaluation": {
+    "split": "test",
+    "accuracy": 0.8962,
+    "num_images": 2726,
+    "source": "Measured with plantdisease.evaluation on the leakage-aware PlantVillage test split. This model's original training split is unknown, so some test photos may have been seen in training."
+  },
+  "temperature": 0.8178,
+  "field_accuracy": 0.2281,
+  "field_images": 741
+}
